@@ -8,7 +8,10 @@ export const productApi = createApi({
 		listPosts: builder.query({
 			query: () => "/posts",
 		}),
+		getPost: builder.query({
+			query: ({ id }) => ({ url: `/posts/${id}` }),
+		}),
 	}),
 });
 
-export const { useListPostsQuery } = productApi;
+export const { useListPostsQuery, useGetPostQuery } = productApi;

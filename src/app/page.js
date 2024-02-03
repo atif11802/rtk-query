@@ -8,6 +8,7 @@ import Posts from "./Posts";
 
 export default function Home() {
 	const { data, isLoading, error } = useListPostsQuery({});
+
 	const userName = useSelector((state) => {
 		return state.authSlice.value.userName;
 	});
